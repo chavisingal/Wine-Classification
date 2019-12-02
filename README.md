@@ -4,11 +4,15 @@
 * Each row pertains to the compositions of wine from which can determine whether its red or white wine.
 * **Our aim is to predict whether the wine style is red or white based on its composition.**
 
+![wine_dataset.csv](images/wine_dataset.png)
+
 # Data Cleaning
 
 * Check for null values in all the variables
 * No null values found in the data.
 * Discard duplicate values, if any
+
+![data_cleaning](images/cleaning.png)
 
 # Create new relevant variables and dropping the variables we will not use:
 
@@ -16,7 +20,11 @@
 * **Free sulfur dioxide**: the part of the Sulphur dioxide that is added to a wine and that is lost into it is said to be bound, while the active part is said to be free. Winemaker will always try to get the highest proportion of free Sulphur to bind.
 * We also have the qualities of the wines given from 1 being the lowest and 10 being the highest. We will create a new column to group the quality into not good, good and excellent and see if there is a significant effect of quality to categorize red or white wines.
 
+![new variables](images/new_variables.png)
+
 # Let us try to classify our observations into ‘red’ or ‘white’ wines using Decision Trees.
+
+![decision tree selection](images/decision_tree.png)
 
 # Decision Tree
 
@@ -24,6 +32,8 @@ From the decision tree in the left, we see that:
 * Chlorides (saltiness) is the most important factor in classifying red and white wines. 72% of the data has less than 0.061 units of chlorides and 97% of those are white wines. Thus, we see that red wines have more chlorides than white wines and are more saltier than white wines.
 * Other important features for the red and white wine classifications are residual sugar, proportion of free SO2, Density and total acidity.
 * Another interesting observation is that quality category was not considered at all in the decision tree, which suggests that the qualities for red and white wines are comparable and not a distinctive feature for their classification.
+
+![full decision tree](images/full_decision_tree.png)
 
 # Random Forest
 
@@ -43,7 +53,12 @@ From the forest performance we see that:
 Our model now is 99.12% accurate.
 We can thus use our random forest model to successfully  classify a given wine observation into red or white wine with 99.12% accuracy.
 
+![random forest](images/random_forest_code.png)
+
 # Visualization for Chlorides for each Wine Style
+
+![chlorides_by_wine](images/chlorides_by_wine.png)
+![code](images/chlorides_by_wine_code.png)
 
 From the graph we see that,\
 The density graph for Chlorides shows us that chlorides concentration is significantly lesser in white wines than red wines. 
@@ -53,6 +68,10 @@ What does this imply?
 The amount of chloride in wine is influenced by both the terroir and type of grape, and the importance of quantification lies in the fact that wine flavor is strongly impacted by this particular ion, which, in high concentration, gives the wine an undesirable salty taste and significantly decreases its market appeal.
 
 # Visualization between Residual Sugar by Total Acidity
+
+![sugar_by_acidity](images/sugar_by_acidity.png)
+![code](images/sugar_by_acidity_code.png)
+
 All wines are inherently acidic with a pH between 2-4.\
 Residual Sugar (or RS) is from natural grape sugars leftover in a wine after the alcoholic fermentation finishes. It’s measured in grams per liter.
 
@@ -60,7 +79,12 @@ We see that the residual sugar is higher for white wines as compared to red wine
 We also see that the total acidity is higher for red wines as compared to white wines.
 
 # Visualization between Alcohol and Density
-The graph on the left shows us the volume of alcohol in the wine by its density.
+
+![alcohol_by_density](images/alcohol_and_density.png)
+![code](images/alcohol_and_density_code.png)
+
+![Visualization between Alcohol and Density](images/alcohol_and_density.png)
+The graph above shows us the volume of alcohol in the wine by its density.
 
 We see that alcohol and density are inversely related. This implies that the wines with higher volume of alcohol in them tend to have a lesser density.
 
@@ -69,6 +93,10 @@ This can be attributed to the fact that alcohol has less weight by volume as com
 Further we see that, white wines have a slightly higher alcohol percentage and hence lower densities as compared to red wines.
 
 # Visualization between the proportion of free SO2 by volume of Alcohol
+
+![so2_by_alcohol](images/so2_by_alcohol.png)
+![code](images/so2_by_alcohol_code.png)
+
 Sulphur dioxide (SO2) is the most widely used and controversial additive in winemaking. Its main functions are to inhibit or kill unwanted yeasts and bacteria, and to protect wine from oxidation.\
 ‘Free’ SO2 is that which is unbound to compounds in the wine and is therefore able to exert an antioxidant/preservative action. ‘Bound’ SO2 is that which has already been complexed to other compounds in the wine (such as sugars) and has essentially been quenched such that it no longer has antioxidant/preservative activity. Total SO2, is the sum of both of these forms.
 
@@ -81,12 +109,21 @@ Now that we have seen the relationships between the variables that affect the cl
 Let us compare the ‘Excellent’ and ‘Not Good’ categories to better understand the influences on wine quality categories.
 
 # Visualization between total acidity and product category
+
+![acidity_by_quality](images/acidity_by_quality.png)
+![code](images/acidity_by_quality_code.png)
+
 From the graph we see that:
 * The chlorides in red wine are higher for all categories compared to white wine.
 * We also see that the ‘Excellent’ wines tend to have lesser levels of chlorides as compared to the ‘Not Good’ category.
 * This implies that high level of chlorides are generally not preferable in wines.
 
 # Visualization between Alcohol/Density and Quality Category
+
+![alcohol_by_quality](images/alcohol_by_quality.png)
+![density_by_quality](images/density_by_quality.png)
+![code](images/alcohol_by_quality_code.png)
+
 As we saw earlier, alcohol content and density are inversely related.
 
 **From the graphs we see that:**
@@ -95,6 +132,10 @@ As we saw earlier, alcohol content and density are inversely related.
 * The alcohol content is comparable in red and white wines but slightly higher in “Excellent” white wines.
 
 # Visualization of Residual Sugar by Quality Category
+
+![sugar_by_quality](images/sugar_by_quality.png)
+![code](images/sugar_by_quality_code.png)
+
 From the graph we see that:
 * Residual sugar is much higher in “Good” white wines as compared to other categories.
 * Residual sugar is generally higher in white wines as compared to red wines.
@@ -102,6 +143,10 @@ From the graph we see that:
 * This in turn also implies that white wines have higher “carbs” as compared to red wines.
 
 # Visualization between Total Acidity and Quality Category
+
+![acidity_by_quality](images/acidity_by_quality.png)
+![code](images/acidity_by_quality_code.png)
+
 The acidity of a wine is one of its most appealing characteristics, enhancing its refreshing, crisp qualities as well as enabling wines to be paired with foods so successfully. Acidity complements foods in a palate-cleansing, refreshing manner.
 
 An important point to remember is that the perception of acidity, as with other flavor components in wine, should not be considered independently. Sweetness and acidity, for example, balance each other. A wine high in acidity that also has a bit of sweetness will seem less acidic.
@@ -113,6 +158,9 @@ From the graph we see that:
 # Insights/Hypotheses
 * We see that the quality of wines (red and white) depends on a combination of different features and we cannot say one type of wine is better than the other. This could further be seen that the quality was not a factor in classifying the wines into ”red” or “white”.
 * According to our model, we see that the chlorides in the wines are a major differentiating factor for red and white wines. We recall, red wines have higher chloride levels as compared to white wines. Most wines are made from fresh grapes from a vineyard. The mineral content of the soil is always reflected in the grape's flavor to some degree and since the areas near the coast have higher chlorine levels, it is interesting to see that:
+
+![coasts](images/coasts.png)   ![states](images/middle_states.png)
+
 * From the data we see that, wines are generally acidic with a pH between 2.5 to 4.5. The acidity of the wines complements the food in a pleasant manner and thus many people prefer to have wine with their food.
 * Our visualizations show us that, generally, wines with a higher alcohol content and lower densities (inversely related) are considered better. This could be because: Higher alcohol is an indication of better ripeness at harvest and fermentation to complete or near-complete dryness.
 * From our visualizations we also see that white wines tend to contain higher residual sugars as compared to red wines and thus higher carbs comparatively.
