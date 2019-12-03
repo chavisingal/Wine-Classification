@@ -159,7 +159,7 @@ From the graph we see that:
 * We see that the quality of wines (red and white) depends on a combination of different features and we cannot say one type of wine is better than the other. This could further be seen that the quality was not a factor in classifying the wines into ”red” or “white”.
 * According to our model, we see that the chlorides in the wines are a major differentiating factor for red and white wines. We recall, red wines have higher chloride levels as compared to white wines. Most wines are made from fresh grapes from a vineyard. The mineral content of the soil is always reflected in the grape's flavor to some degree and since the areas near the coast have higher chlorine levels, it is interesting to see that:
 
-![coasts](images/coasts.png)   ![states](images/middle_states.png)
+<img src="images/coasts.png" width="425" height="auto"> <img src="images/middle_states.png" width="425" height="auto"></img>
 
 * From the data we see that, wines are generally acidic with a pH between 2.5 to 4.5. The acidity of the wines complements the food in a pleasant manner and thus many people prefer to have wine with their food.
 * Our visualizations show us that, generally, wines with a higher alcohol content and lower densities (inversely related) are considered better. This could be because: Higher alcohol is an indication of better ripeness at harvest and fermentation to complete or near-complete dryness.
